@@ -1,7 +1,7 @@
 local UserInputService = game:GetService("UserInputService")
 
 if UserInputService.TouchEnabled and not UserInputService.KeyboardEnabled then
-    print(1 + 1)
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Infernalblight/Aetheris.vip/refs/heads/main/Roblox/Script/Mobile.lua"))()
 else
-    print(2 + 2)
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Infernalblight/Aetheris.vip/refs/heads/main/Roblox/Script/Pc.lua"))()
 end
