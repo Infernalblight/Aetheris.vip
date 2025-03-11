@@ -9,5 +9,12 @@ GameBattletab.newButton("Admin", "Gives access to admin menu", function()
 end)
 
 GameBattletab.newButton("no cooldown", "No cooldown on moves", function()
-    print('Hello!')
+    local replicatedStorage = game:GetService("ReplicatedStorage")
+    local remoteEvent = replicatedStorage:FindFirstChild("NoCoolDown")
+
+    if remoteEvent and remoteEvent:IsA("RemoteEvent") then
+        remoteEvent:FireServer()
+    else
+        warn("NoCoolDown RemoteEvent not found!")
+    end
 end)
