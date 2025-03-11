@@ -2,19 +2,12 @@ local DrRayLibrary = loadstring(game:HttpGet("https://raw.githubusercontent.com/
 
 local window = DrRayLibrary:Load("Aetheris.vip", "Default")
 
+if game.PlaceId == 72857483350036 then
 local GameBattletab = DrRayLibrary.newTab("Admin+", "")
 
 GameBattletab.newButton("Admin", "Gives access to admin menu", function()
     game.Players.LocalPlayer.PlayerGui.Settings.Settings.Visible = true
 end)
+end
 
-GameBattletab.newButton("no cooldown", "No cooldown on moves", function()
-    local replicatedStorage = game:GetService("ReplicatedStorage")
-    local remoteEvent = replicatedStorage:FindFirstChild("NoCoolDown")
-
-    if remoteEvent and remoteEvent:IsA("RemoteEvent") then
-        remoteEvent:FireServer()
-    else
-        warn("NoCoolDown RemoteEvent not found!")
-    end
-end)
+local Aimbottab = DrRayLibrary.newTab("Aimbot", "")
